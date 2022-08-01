@@ -1,0 +1,51 @@
+.portfolio {
+	&__title {
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 60px;
+	}
+
+	&__heading {
+		flex: 0 0 100%;
+		max-width: 100%;
+		font-family: "metro_medium";
+		font-weight: 500;
+		font-size: 28px;
+		margin-bottom: 40px;
+		text-transform: capitalize;
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+
+	&__item {
+		flex: 0 0 32%;
+		max-width: 32%;
+		margin-bottom: 30px;
+	}
+
+	&__item-inner {
+		border: 6px solid $bg-black-100;
+		border-radius: 10px;
+		overflow: hidden;
+		cursor: pointer;
+		box-shadow: 0 0 20px rgba(48, 46, 77, .15);
+		transition: $transition;
+		&:hover {
+			border: 6px solid var(--skin-color);
+		}
+	}
+
+	&__img {
+		display: block;
+
+		img {
+			max-width: 100%;
+			display: block;
+
+		}
+	}
+}

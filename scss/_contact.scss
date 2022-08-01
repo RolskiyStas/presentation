@@ -1,0 +1,133 @@
+.contact {
+	&__title {
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 60px;
+	}
+
+	&__service,
+	&__form {
+		flex: 0 0 100%;
+		max-width: 100%;
+		text-align: center;
+	}
+}
+
+.service {
+	&__title {
+		font-family: 'metro_medium';
+		font-weight: 500;
+		font-size: 32px;
+		color: var(--skin-color);
+		text-transform: capitalize;
+		letter-spacing: 2px;
+		margin-bottom: 15px;
+	}
+
+	&__subtitle {
+		font-family: "metro_semiBold";
+		font-weight: 600;
+		font-size: 18px;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+
+	&__droup {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	&__droup-icon {
+		svg {
+			width: 40px;
+			height: 40px;
+			fill: var(--skin-color);
+		}
+	}
+
+	&__droup-title {
+		font-family: "metro_semiBold";
+		font-weight: 600;
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+
+	&__droup-info {
+		font-family: "metro_light";
+		font-weight: 300;
+		color: $text-black-700;
+		transition: $transition;
+
+		&:hover {
+			color: var(--skin-color);
+		}
+	}
+}
+
+.form {
+	margin-top: 60px;
+
+	&__title {
+		font-family: 'metro_medium';
+		font-weight: 500;
+		font-size: 28px;
+		color: var(--skin-color);
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+
+	&__subtitle {
+		font-family: "metro_semiBold";
+		font-weight: 600;
+		font-size: 16px;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+	}
+
+	&__content-items {
+		display: flex;
+		gap: 30px;
+		flex: 0 0 100%;
+		width: 100%;
+
+		.form__content-input {
+			width: 50%;
+		}
+	}
+
+	&__content-input {
+		font-family: "metro_medium";
+		font-weight: 500;
+		color: $text-black-900;
+		padding: 15px 30px;
+		border: 1px solid $bg-black-50;
+		border-radius: 40px;
+	}
+
+	textarea.form__content-input {
+		height: 160px;
+		resize: none;
+	}
+
+	textarea::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	textarea::-webkit-scrollbar-thumb {
+		background-color: var(--skin-color);
+		outline: 1px solid $bg-black-50;
+		border-radius: 2px;
+	}
+
+	&__btn {
+		margin-top: 25px;
+	}
+}

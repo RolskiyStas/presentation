@@ -1,0 +1,38 @@
+//  FONTS LOAD SECTION &display="swap"
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script:regular&display="swap"');
+
+@font-face {
+	src: url("../fonts/Metropolis-ExtraLight.woff2") format("woff2");
+	font-family: "metro_extraLight";
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	src: url("../fonts/Metropolis-Light.woff2") format("woff2");
+	font-family: "metro_light";
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	src: url("../fonts/Metropolis-Regular.woff2") format("woff2");
+	font-family: "metro_regular";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	src: url("../fonts/Metropolis-Medium.woff2") format("woff2");
+	font-family: "metro_medium";
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	src: url("../fonts/Metropolis-SemiBold.woff2") format("woff2");
+	font-family: "metro_semiBold";
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}

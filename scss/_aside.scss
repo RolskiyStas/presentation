@@ -1,0 +1,141 @@
+.aside {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: $transition;
+
+	&__logo {
+		position: absolute;
+		top: 50px;
+		font-size: 30px;
+		text-transform: capitalize;
+	}
+}
+
+.logo-link {
+	font-weight: 700;
+	padding: 10px 25px;
+	letter-spacing: 5px;
+	position: relative;
+
+	span {
+		font-family: "Clicker Script", cursive;
+		font-size: 40px;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 20px;
+	}
+
+	&::before {
+		bottom: 0;
+		left: 0;
+		border-bottom: 5px solid var(--skin-color);
+		border-left: 5px solid var(--skin-color);
+	}
+
+	&::after {
+		top: 0;
+		right: 0;
+		border-top: 5px solid var(--skin-color);
+		border-right: 5px solid var(--skin-color);
+	}
+}
+
+.nav {
+	&__toggle {
+		width: 45px;
+		height: 40px;
+		border: 1px solid $bg-black-50;
+		cursor: pointer;
+		position: fixed;
+		top: 20px;
+		left: 300px;
+		border-radius: 5px;
+		background: $bg-black-100;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		transition: $transition;
+
+		&.open {
+			span {
+				background-color: transparent;
+
+				&::before {
+					transform: rotate(45deg);
+					top: 0;
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+						top: 0;
+				}
+			}
+		}
+
+		span {
+			height: 2px;
+			width: 18px;
+			background: var(--skin-color);
+			display: inline-block;
+			position: relative;
+
+			&::before,
+			&::after {
+				content: '';
+				height: 2px;
+				width: 18px;
+				background: var(--skin-color);
+				position: absolute;
+				left: 0;
+			}
+
+			&::before {
+				top: -6px;
+			}
+
+			&::after {
+				top: 6px;
+			}
+		}
+	}
+
+	&__items {
+		margin-top: 50px;
+	}
+
+	&__item {
+		margin-bottom: 20px;
+		display: block;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: $text-black-900;
+		}
+
+
+	}
+
+	&__link {
+		font-family: 'metro_semiBold', sans-serif;
+		padding: 5px 15px;
+		border-bottom: 1px solid $bg-black-50;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		&.active {
+			color: var(--skin-color);
+
+			svg {
+				fill: var(--skin-color);
+			}
+		}
+	}
+}
