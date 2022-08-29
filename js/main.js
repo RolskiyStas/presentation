@@ -10,7 +10,7 @@ for (let i = 0; i < totalNavList; i++) {
 	const a = navList[i].querySelector('a')
 	a.addEventListener('click', function () {
 		removeBackSection()
-		for(let j = 0; j < totalNavList; j++) {
+		for (let j = 0; j < totalNavList; j++) {
 			if (navList[j].querySelector('a').classList.contains('active')) {
 				addBackSection(j)
 			}
@@ -69,7 +69,7 @@ navToggleBtn.addEventListener('click', () => {
 function asideSectionToggleBtn() {
 	aside.classList.toggle('open')
 	navToggleBtn.classList.toggle('open')
-	for(let i = 0; i < totalSection; i++) {
+	for (let i = 0; i < totalSection; i++) {
 		allSection[i].classList.toggle('open')
 	}
 }
@@ -81,9 +81,10 @@ styleSwitcherToggle.addEventListener('click', () => {
 })
 
 window.addEventListener('scroll', () => {
-	if (document.querySelector('.switcher').classList.contains('open')) {
-		document.querySelector('.switcher').classList.remove('open')
-	}
+	console.log('aa');
+	// if (document.querySelector('.switcher').classList('switcher open')) {
+	// 	document.querySelector('.switcher').classList.remove('open')
+	// }
 })
 
 /* theme colors */
@@ -94,7 +95,23 @@ function setActiveStyle(color) {
 		if (color === style.getAttribute('title')) {
 			style.removeAttribute('disabled')
 		} else {
-			style.setAttribute('disabled','true')
+			style.setAttribute('disabled', 'true')
 		}
 	})
 }
+
+/* sending form */
+
+const submitForm = document.querySelector('.form__submit')
+const btnForm = document.querySelector('.form__btn')
+const inputForm = document.querySelectorAll('.form__content-input')
+
+btnForm.addEventListener('click', () => {
+	submitForm.classList.toggle('submit')
+	inputForm.forEach(element => {
+		element.value = ''
+	});
+	setTimeout(() => {
+		submitForm.classList.remove('submit')
+	}, 3500);
+})

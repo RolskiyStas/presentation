@@ -879,8 +879,6 @@ body {
   max-width: 40%;
   text-align: center;
   position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .home__img::after {
   content: "";
@@ -906,6 +904,7 @@ body {
   border-radius: 5px;
   margin: auto;
   max-height: 400px;
+  margin-right: 15px;
 }
 
 .about__title {
@@ -961,7 +960,6 @@ body {
 .info__item span {
   font-weight: 400;
   color: #e9e9e9;
-  margin-left: 4px;
   display: inline-block;
 }
 .info__item-text {
@@ -1197,6 +1195,56 @@ body {
 
 .form {
   margin-top: 60px;
+  position: relative;
+}
+.form__submit {
+  display: none;
+}
+.form__submit.submit {
+  position: absolute;
+  color: var(--skin-color);
+  background: #151515;
+  font-family: "metro_medium";
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--skin-color);
+  text-transform: capitalize;
+  left: 50%;
+  top: 50%;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  border: 1px solid #393939;
+  border-radius: 40px;
+  opacity: 0;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+@-webkit-keyframes slidein {
+  0% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slidein {
+  0% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .form__title {
   font-family: "metro_medium";
@@ -1230,7 +1278,7 @@ body {
 .form__content-input {
   font-family: "metro_medium";
   font-weight: 500;
-  color: #ffffff;
+  color: var(--skin-color);
   padding: 15px 30px;
   border: 1px solid #393939;
   border-radius: 40px;
@@ -1250,7 +1298,6 @@ body {
 .form__btn {
   margin-top: 25px;
 }
-
 .switcher {
   position: fixed;
   right: 0;
@@ -1348,6 +1395,13 @@ body {
   }
   .section.open {
     left: 270px;
+  }
+  .section.open .home__img {
+    display: none;
+  }
+  .section.open .home__info {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
   .info__item span {
     display: block;
